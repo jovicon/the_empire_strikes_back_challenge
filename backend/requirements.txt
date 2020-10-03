@@ -1,2 +1,6 @@
 fastapi
 uvicorn
+asyncpg
+tortoise-orm==0.16.12
+pytest==5.4.2
+requests==2.23.0
