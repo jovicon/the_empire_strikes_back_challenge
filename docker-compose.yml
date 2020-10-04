@@ -1,7 +1,8 @@
 version: '3.7'
 
 services:
-  web:
+  # backend
+  web-backend:
     build: ./backend
     command: uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8000
     volumes:
@@ -11,10 +12,10 @@ services:
     environment:
       - ENVIRONMENT=dev
       - TESTING=0
-      - DATABASE_URL=postgres://postgres:postgres@web-db:5432/web_dev        # new
-      - DATABASE_TEST_URL=postgres://postgres:postgres@web-db:5432/web_test  # new
+      - DATABASE_URL=postgres://postgres:postgres@web-db:5432/web_dev  
+      - DATABASE_TEST_URL=postgres://postgres:postgres@web-db:5432/web_test
 
-  # new
+  # db
   web-db:
     build:
       context: ./backend/db
