@@ -17,12 +17,12 @@ cómodo, deberás crear un servicio que recibirá y devolverá información de t
 
 <br>
 
-1. Asegurarse de crear un servicio REST que contenga los siguientes endpoints:
+1. **Asegurarse de crear un servicio REST que contenga los siguientes endpoints:**
 
 <br>
 
-⋅⋅* Crear una tripulación, para ellos se tendrá que guardar en una base de
-datos (libre elección) la siguiente información:
+* **Crear una tripulación:**  
+para ellos se tendrá que guardar en una base de datos (libre elección) la siguiente información:  
 - ID de la tripulación
 - Nombre de la tripulación
 - Cantidad de tripulantes
@@ -32,14 +32,21 @@ datos (libre elección) la siguiente información:
 
 <br> 
 
-⋅⋅* **Listar tripulaciones**
+* **Listar tripulaciones**
 **Importante:**
 - Deberás crear una paginación para este endpoint
-- Se podrá buscar por nombre de tripulación
-⋅⋅* Obtener una tripulación con la información detallada (dado un ID)
-⋅⋅* Eliminar una tripulación (dado un ID)
-⋅⋅* Editar una tripulación (dado un ID)
 
+
+* **Se podrá buscar por nombre de tripulación**
+<br>
+
+* **Obtener una tripulación con la información detallada (dado un ID)**
+<br>
+
+* **Eliminar una tripulación (dado un ID)**
+<br>
+
+* **Editar una tripulación (dado un ID)**
 <br>
 
 2. Tests unitarios con coverage de código > 80
