@@ -23,6 +23,8 @@ cómodo, deberás crear un servicio que recibirá y devolverá información de t
 <br>
 
 * **Crear una tripulación,** para ellos se tendrá que guardar en una base de datos (libre elección) la siguiente información:  
+<br>
+
    ID de la tripulación  
    Nombre de la tripulación  
    Cantidad de tripulantes  
