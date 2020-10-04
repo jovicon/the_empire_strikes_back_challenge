@@ -8,43 +8,43 @@ from app.models.tortoise import CrewSchema
 
 router = APIRouter()
 
-# TODO: 
-# Create a Crew
-# Read all Crews
+# TODO:
+# Create a Crew - Ready
+# Read all Crews - Almost ready - paginating missing
 # Update a Crew (dado un ID)
 # Delete a Crew (dado un ID)
 
-@router.post('/', response_model=CrewResponseSchema, status_code=201)
+
+@router.post("/", response_model=CrewResponseSchema, status_code=201)
 async def create_crew(payload: CrewPayloadSchema) -> CrewResponseSchema:
-    '''
+    """
     Create a Crew.
-    
+
     Crea una tripulación, se guarda la siguiente informacion:
 
-    * ID de la tripulación 
+    * ID de la tripulación
     * Nombre de la tripulación
     * Cantidad de tripulantes
     * Modelo de la nave espacial
     * Costo de la nave espacial
     * Velocidad máxima de la nave espacial
-    
-    '''
+
+    """
     crew_id = await crud.post(payload)
 
     response_object = {
-        'id': crew_id,
-        'name': payload.name,
-        'crew_quantity': payload.crew_quantity,
-        'ship_name': payload.ship_name,
-        'ship_cost': payload.ship_cost,
-        'ship_max_speed': payload.ship_max_speed,
+        "id": crew_id,
+        "name": payload.name,
+        "crew_quantity": payload.crew_quantity,
+        "ship_name": payload.ship_name,
+        "ship_cost": payload.ship_cost,
+        "ship_max_speed": payload.ship_max_speed,
     }
 
     return response_object
 
 
-
-@router.get('/{id}/', response_model=CrewSchema)
+@router.get("/{id}/", response_model=CrewSchema)
 async def read_crew(id: int) -> CrewSchema:
     crew = await crud.get(id)
     if not crew:
@@ -53,15 +53,13 @@ async def read_crew(id: int) -> CrewSchema:
     return crew
 
 
-@router.get('/', response_model=List[CrewSchema])
+@router.get("/", response_model=List[CrewSchema])
 async def read_all_crews() -> List[CrewSchema]:
-    '''
+    """
     Read all Crews
 
     * Deberás crear una paginación para este endpoint
-    * Se podrá buscar por nombre de tripulación  
+    * Se podrá buscar por nombre de tripulación
     * Obtener una tripulación con la información detallada (dado un ID)
-    '''
+    """
     return await crud.get_all()
-
-

@@ -6,8 +6,8 @@ def test_ping(test_app):
     # test_app
 
     # WHEN
-    response = test_app.get('/ping')
-    
+    response = test_app.get("/ping")
+
     # THEN
     assert response.status_code == 200
-    assert response.json() == {'environment': 'dev', 'ping': 'pong!', 'testing': True}
+    assert response.json() == {"environment": "dev", "ping": "pong!", "testing": True}

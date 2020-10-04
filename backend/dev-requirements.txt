@@ -1,2 +1,4 @@
 pylint
 mypy
+black
+isort==4.3.21

@@ -3,13 +3,14 @@ from app.config import get_settings, Settings
 
 router = APIRouter()
 
+
 @router.get("/ping")
 async def pong(settings: Settings = Depends(get_settings)):
-    '''
+    """
     Ping Pong API health check
-    '''
+    """
     return {
-        "ping":"pong!",
+        "ping": "pong!",
         "environment": settings.environment,
-        "testing": settings.testing
+        "testing": settings.testing,
     }

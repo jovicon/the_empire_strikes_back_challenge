@@ -3,6 +3,7 @@ from typing import Union, List
 from app.models.pydantic import CrewPayloadSchema
 from app.models.tortoise import Crew
 
+
 async def post(payload: CrewPayloadSchema) -> int:
     crew = Crew(
         name=payload.name,
