@@ -22,7 +22,7 @@ cómodo, deberás crear un servicio que recibirá y devolverá información de t
 
 <br>
 
-* **Crear una tripulación,** para ellos se tendrá que guardar en una base de datos (libre elección) la siguiente información:
+* **Crear una tripulación,** para ellos se tendrá que guardar en una base de datos (libre elección) la siguiente información:  
    ID de la tripulación
    Nombre de la tripulación
    Cantidad de tripulantes
@@ -32,8 +32,8 @@ cómodo, deberás crear un servicio que recibirá y devolverá información de t
 
 <br>
 
-* **Listar tripulaciones,** importante:
-Deberás crear una paginación para este endpoint
+* **Listar tripulaciones,** importante:  
+   Deberás crear una paginación para este endpoint
 <br>
 
 * **Se podrá buscar por nombre de tripulación**
