@@ -1,5 +1,6 @@
 # The Empire strikes back challenge
-Empire strikes back challenge - VueJs + FastAPI
+**The Empire strikes back challenge**   
+**VueJs + FastAPI Version**
 
 ## Description:
 Necesitamos tu ayuda para poder derrocar al imperio el cual ha dominado la galaxia durante
@@ -17,29 +18,34 @@ cómodo, deberás crear un servicio que recibirá y devolverá información de t
 
 <br>
 
-1. Asegurarse de crear un servicio REST que contenga los siguientes endpoints:
+1. **Asegurarse de crear un servicio REST que contenga los siguientes endpoints:**
 
 <br>
 
-⋅⋅* Crear una tripulación, para ellos se tendrá que guardar en una base de
-datos (libre elección) la siguiente información:
-- ID de la tripulación
-- Nombre de la tripulación
-- Cantidad de tripulantes
-- Modelo de la nave espacial
-- Costo de la nave espacial
-- Velocidad máxima de la nave espacial
+* **Crear una tripulación,** para ellos se tendrá que guardar en una base de datos (libre elección) la siguiente información:  
+   ID de la tripulación  
+   Nombre de la tripulación  
+   Cantidad de tripulantes  
+   Modelo de la nave espacial  
+   Costo de la nave espacial  
+   Velocidad máxima de la nave espacial  
 
-<br> 
+<br>
 
-⋅⋅* **Listar tripulaciones**
-**Importante:**
-- Deberás crear una paginación para este endpoint
-- Se podrá buscar por nombre de tripulación
-⋅⋅* Obtener una tripulación con la información detallada (dado un ID)
-⋅⋅* Eliminar una tripulación (dado un ID)
-⋅⋅* Editar una tripulación (dado un ID)
+* **Listar tripulaciones,** importante:  
+   Deberás crear una paginación para este endpoint
+<br>
 
+* **Se podrá buscar por nombre de tripulación**
+<br>
+
+* **Obtener una tripulación con la información detallada (dado un ID)**
+<br>
+
+* **Eliminar una tripulación (dado un ID)**
+<br>
+
+* **Editar una tripulación (dado un ID)**
 <br>
 
 2. Tests unitarios con coverage de código > 80
@@ -50,21 +56,19 @@ datos (libre elección) la siguiente información:
 
 <br>
 
-Ten en cuenta que este servicio a futuro utilizará servicios externos, y puede que se
-necesite hacer cambios a futuro, por ende necesitamos que sea los más escalable y flexible
-posible.
-
-<br>
+Ten en cuenta que este servicio a futuro utilizará servicios externos, 
+y puede que se necesite hacer cambios a futuro, 
+por ende necesitamos que sea los más escalable y flexible posible.
 
 #### BONUS
-⋅⋅* Dockerizar
-⋅⋅* Cree un microservicio para lo anterior y conéctelo usando docker-compose
+* Dockerizar
+* Cree un microservicio para lo anterior y conéctelo usando docker-compose
+<br>
 
 ### FRONT
 Para el desarrollo del Front, podrás utilizar entre Angular 2+, Vue.js o React, siéntete libre
 de utilizar la librería UI open source que más te acomode.  
 
-<br>
 
 1. La primera pantalla deberá listar el nombre de todas las tripulaciones existentes, con
 un límite de 6 tripulaciones por página.
@@ -78,17 +82,16 @@ buscará una tripulación dado el nombre, sería ideal que fuera Live Search.
 4. Deberás implementar un botón para agregar una nueva tripulación.
 Cada cambio se debe ver reflejado en la lista de tripulación.
 
-<br>
-
 #### BONUS
-⋅⋅* Dockerizar
-⋅⋅* Styled Components
-⋅⋅* Hooks
+* Dockerizar
+* Styled Components
+* Hooks
 
 En la página 3, hemos dejado un ejemplo guía de como podría ser el diseño.
 Una vez terminado, envíanos el link del repositorio público para que podamos revisarlo y por
 favor no olvides crear un README con la instrucciones para levantar el proyecto.
 Éxito!!
+<br>
 
 ## Solution:  
 
@@ -96,7 +99,7 @@ Las tecnologias Jedi seleccionadas para enfrentar el reto son las siguientes:
 
 ### Backend: 
 
-FastAPI  
+**FastAPI**
 1. Es un Framework fuertemente inspirado en Flask 
 2. Toma ventaja sobre Python type para validacion de datos
 3. Es rapido, gracias a soportar "async mode"
