@@ -1,4 +1,5 @@
 from tortoise import fields, models
+from tortoise.contrib.pydantic import pydantic_model_creator
 
 class Crew(models.Model):
     id = fields.IntField(pk=True)
@@ -21,3 +22,6 @@ class Crew(models.Model):
             self.ship_max_speed
         ]
         return  'Crew: ' + ' '.join(crew)
+
+
+CrewSchema = pydantic_model_creator(Crew)
