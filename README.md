@@ -23,12 +23,12 @@ cómodo, deberás crear un servicio que recibirá y devolverá información de t
 <br>
 
 * **Crear una tripulación,** para ellos se tendrá que guardar en una base de datos (libre elección) la siguiente información:  
-   ID de la tripulación
-   Nombre de la tripulación
-   Cantidad de tripulantes
-   Modelo de la nave espacial
-   Costo de la nave espacial
-   Velocidad máxima de la nave espacial
+   ID de la tripulación  
+   Nombre de la tripulación  
+   Cantidad de tripulantes  
+   Modelo de la nave espacial  
+   Costo de la nave espacial  
+   Velocidad máxima de la nave espacial  
 
 <br>
 
