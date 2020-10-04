@@ -1,5 +1,6 @@
 # The Empire strikes back challenge
-Empire strikes back challenge - VueJs + FastAPI
+**The Empire strikes back challenge**   
+**VueJs + FastAPI Version**
 
 ## Description:
 Necesitamos tu ayuda para poder derrocar al imperio el cual ha dominado la galaxia durante
@@ -64,8 +65,8 @@ posible.
 <br>
 
 #### BONUS
-⋅⋅* Dockerizar
-⋅⋅* Cree un microservicio para lo anterior y conéctelo usando docker-compose
+* Dockerizar
+* Cree un microservicio para lo anterior y conéctelo usando docker-compose
 
 ### FRONT
 Para el desarrollo del Front, podrás utilizar entre Angular 2+, Vue.js o React, siéntete libre
@@ -88,9 +89,9 @@ Cada cambio se debe ver reflejado en la lista de tripulación.
 <br>
 
 #### BONUS
-⋅⋅* Dockerizar
-⋅⋅* Styled Components
-⋅⋅* Hooks
+* Dockerizar
+* Styled Components
+* Hooks
 
 En la página 3, hemos dejado un ejemplo guía de como podría ser el diseño.
 Una vez terminado, envíanos el link del repositorio público para que podamos revisarlo y por
