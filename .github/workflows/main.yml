@@ -65,7 +65,7 @@ jobs:
       - name: Pytest
         run: docker exec fastapi-tdd python -m pytest .
       - name: Pylint
-        run: docker exec fastapi-tdd python -m pylint app/
+        run: docker exec fastapi-tdd python -m pylint app/ --exit-zero
       - name: Black
         run: docker exec fastapi-tdd python -m black . --check
       - name: isort
