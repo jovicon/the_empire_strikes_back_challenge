@@ -64,8 +64,8 @@ jobs:
             ${{ env.IMAGE }}:latest
       - name: Pytest
         run: docker exec fastapi-tdd python -m pytest .
-      - name: Pylint
-        run: docker exec fastapi-tdd python -m pylint app/
+      # - name: Pylint
+      #   run: docker exec fastapi-tdd python -m pylint app/
       - name: Black
         run: docker exec fastapi-tdd python -m black . --check
       - name: isort
