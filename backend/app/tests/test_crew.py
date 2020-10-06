@@ -106,3 +106,32 @@ def test_read_all_sumaries(test_app_with_db):
 
     response_list = response.json()
     assert len(list(filter(lambda d: d["id"] == crew_id, response_list))) == 1
+
+
+def test_remove_crew(test_app_with_db):
+    data = {
+        "name": "among us",
+        "crew_quantity": 10,
+        "ship_name": "skeld",
+        "ship_cost": 123456789,
+        "ship_max_speed": 198,
+    }
+    response = test_app_with_db.post("/crews/", data=json.dumps(data))
+    crew_id = response.json()["id"]
+
+    response = test_app_with_db.delete(f"/crews/{crew_id}/")
+    assert response.status_code == 200
+
+    response_dict = response.json()
+    assert response_dict["id"] == crew_id
+    assert response_dict["name"] == data["name"]
+    assert response_dict["crew_quantity"] == data["crew_quantity"]
+    assert response_dict["ship_name"] == data["ship_name"]
+    assert response_dict["ship_cost"] == data["ship_cost"]
+    assert response_dict["ship_max_speed"] == data["ship_max_speed"]
+
+
+def test_remove_crew_incorrect_id(test_app_with_db):
+    response = test_app_with_db.delete("/crews/999/")
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Crew not found"

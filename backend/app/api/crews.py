@@ -63,3 +63,14 @@ async def read_all_crews() -> List[CrewSchema]:
     * Obtener una tripulación con la información detallada (dado un ID)
     """
     return await crud.get_all()
+
+
+@router.delete("/{id}/", response_model=CrewResponseSchema)
+async def delete_crew(id: int) -> CrewResponseSchema:
+    crew = await crud.get(id)
+    if not crew:
+        raise HTTPException(status_code=404, detail="Crew not found")
+
+    await crud.delete(id)
+
+    return crew

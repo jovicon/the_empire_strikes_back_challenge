@@ -1,10 +1,7 @@
-# Test-Driven Development with FastAPI and Docker
-
-![Continuous Integration and Delivery](https://github.com/jovicon/the_empire_strikes_back_challenge/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
-
 # The Empire strikes back challenge
 **The Empire strikes back challenge**   
 **VueJs + FastAPI Version**
+![Continuous Integration and Delivery](https://github.com/jovicon/the_empire_strikes_back_challenge/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
 
 ## Description:
 Necesitamos tu ayuda para poder derrocar al imperio el cual ha dominado la galaxia durante

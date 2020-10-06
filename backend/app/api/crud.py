@@ -26,3 +26,8 @@ async def get(id: int) -> Union[dict, None]:
 async def get_all() -> List:
     crews = await Crew.all().values()
     return crews
+
+
+async def delete(id: int) -> int:
+    crew = await Crew.filter(id=id).first().delete()
+    return crew
