@@ -27,6 +27,7 @@ async def get_all() -> List:
     crews = await Crew.all().values()
     return crews
 
+
 async def get_pagination(limit: int, offset: int) -> List:
     crews = await Crew.all().limit(limit).offset(offset)
     return crews

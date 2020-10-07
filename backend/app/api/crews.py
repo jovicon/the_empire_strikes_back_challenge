@@ -58,7 +58,9 @@ async def read_crew(id: int) -> CrewSchema:
 
 
 @router.get("/", response_model=List[CrewSchema])
-async def read_all_crews(limit: Optional[int] = None, offset: Optional[int] = None) -> List[CrewSchema]:
+async def read_all_crews(
+    limit: Optional[int] = None, offset: Optional[int] = None
+) -> List[CrewSchema]:
     """
     Read all Crews
 
@@ -68,10 +70,10 @@ async def read_all_crews(limit: Optional[int] = None, offset: Optional[int] = No
     """
     # return await crud.get_all()
     if limit and offset:
-        return await crud.get_pagination(limit,offset)
+        return await crud.get_pagination(limit, offset)
     elif limit:
         offset = 0
-        return await crud.get_pagination(limit,offset)
+        return await crud.get_pagination(limit, offset)
     else:
         return await crud.get_all()
 
