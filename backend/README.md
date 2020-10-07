@@ -1,7 +1,5 @@
 # BACK-END Installation
 
-
-
 ## Local:  
 Requirements:
 - Python >= 3.6
