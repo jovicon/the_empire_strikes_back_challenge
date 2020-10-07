@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from fastapi import APIRouter, HTTPException
 
@@ -58,7 +58,7 @@ async def read_crew(id: int) -> CrewSchema:
 
 
 @router.get("/", response_model=List[CrewSchema])
-async def read_all_crews() -> List[CrewSchema]:
+async def read_all_crews(limit: Optional[int] = None, offset: Optional[int] = None) -> List[CrewSchema]:
     """
     Read all Crews
 
@@ -66,7 +66,14 @@ async def read_all_crews() -> List[CrewSchema]:
     * Se podrá buscar por nombre de tripulación
     * Obtener una tripulación con la información detallada (dado un ID)
     """
-    return await crud.get_all()
+    # return await crud.get_all()
+    if limit and offset:
+        return await crud.get_pagination(limit,offset)
+    elif limit:
+        offset = 0
+        return await crud.get_pagination(limit,offset)
+    else:
+        return await crud.get_all()
 
 
 @router.delete("/{id}/", response_model=CrewResponseSchema)
