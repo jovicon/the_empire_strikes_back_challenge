@@ -11,3 +11,7 @@ class CrewPayloadSchema(BaseModel):
 
 class CrewResponseSchema(CrewPayloadSchema):
     id: int
+
+
+class CrewUpdatePayloadSchema(CrewPayloadSchema):
+    pass

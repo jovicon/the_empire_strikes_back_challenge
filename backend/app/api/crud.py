@@ -31,3 +31,17 @@ async def get_all() -> List:
 async def delete(id: int) -> int:
     crew = await Crew.filter(id=id).first().delete()
     return crew
+
+
+async def put(id: int, payload: CrewPayloadSchema) -> Union[dict, None]:
+    crew = await Crew.filter(id=id).update(
+        name=payload.name,
+        crew_quantity=payload.crew_quantity,
+        ship_name=payload.ship_name,
+        ship_cost=payload.ship_cost,
+        ship_max_speed=payload.ship_max_speed,
+    )
+    if crew:
+        updated_crew = await Crew.filter(id=id).first().values()
+        return updated_crew[0]
+    return None

@@ -3,7 +3,11 @@ from typing import List
 from fastapi import APIRouter, HTTPException
 
 from app.api import crud
-from app.models.pydantic import CrewPayloadSchema, CrewResponseSchema
+from app.models.pydantic import (
+    CrewPayloadSchema,
+    CrewResponseSchema,
+    CrewUpdatePayloadSchema,
+)
 from app.models.tortoise import CrewSchema
 
 router = APIRouter()
@@ -72,5 +76,14 @@ async def delete_crew(id: int) -> CrewResponseSchema:
         raise HTTPException(status_code=404, detail="Crew not found")
 
     await crud.delete(id)
+
+    return crew
+
+
+@router.put("/{id}/", response_model=CrewSchema)
+async def update_crew(id: int, payload: CrewUpdatePayloadSchema) -> CrewSchema:
+    crew = await crud.put(id, payload)
+    if not crew:
+        raise HTTPException(status_code=404, detail="Crew not found")
 
     return crew
