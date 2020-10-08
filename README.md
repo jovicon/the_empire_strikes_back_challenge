@@ -127,7 +127,7 @@ Las tecnologias Jedi seleccionadas para enfrentar el reto son las siguientes:
 4. PgAdmin para manejar seguridad de informacion
 
 
-### Instalación local con Docker-compose
+## Instalación local con Docker-compose
 Empiece por asegurarse de tener Docker y Docker Compose:
 ```bash
 $ docker -v
@@ -140,7 +140,7 @@ docker-compose version 1.25.4, build 8d51620a
 Asegúrese de instalarlos o actualizarlos si es necesario.  
 [Instala Docker aqui!](https://docs.docker.com/get-docker/)  
 
-Luego de instalar Docker, clone este repositorio e inicie docker-compose.
+Luego asegurarse de tener Docker, clone este repositorio, ingrese a la carpeta e inicie docker-compose.
 ```bash
 $ git clone https://github.com/jovicon/the_empire_strikes_back_challenge.git
 
@@ -149,6 +149,23 @@ $ cd the_empire_strikes_back_challenge
 $ docker-compose up -d --build
 ```
 
-Al terminar el **build** ingresa a la [app aqui!](http://localhost:8080/)  
+Al terminar el **build** ingrese a la [app aqui!](http://localhost:8080/)  
 
-Documentacion de API: [click aqui!](http://localhost:8002/docs)  
+Documentación de API: [click aqui!](http://localhost:8002/docs)  
+
+### Tests
+
+Una vez activos los contenedores podemos realizar tests:
+```bash
+# cobertura de test sobre backend
+$ docker-compose exec web-backend python -m pytest app/ --cov="."
+
+# verificador de código fuente, errores y calidad para el lenguaje
+$ docker-compose exec web-backend pylint app/
+
+# corrector de formato para python
+$ docker-compose exec web-backend black app/ --diff
+
+# orden correcto para importar librerias desde cada archivo
+$ docker-compose exec web-backend /bin/sh -c "isort ./**/*.py --diff"
+```

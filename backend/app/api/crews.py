@@ -1,3 +1,6 @@
+"""
+Crews API
+"""
 from typing import List, Optional
 
 from fastapi import APIRouter, HTTPException
@@ -50,6 +53,9 @@ async def create_crew(payload: CrewPayloadSchema) -> CrewResponseSchema:
 
 @router.get("/{id}/", response_model=CrewSchema)
 async def read_crew(id: int) -> CrewSchema:
+    """
+    Read Crew by id
+    """
     crew = await crud.get(id)
     if not crew:
         raise HTTPException(status_code=404, detail="Crew not found")
@@ -80,6 +86,9 @@ async def read_all_crews(
 
 @router.delete("/{id}/", response_model=CrewResponseSchema)
 async def delete_crew(id: int) -> CrewResponseSchema:
+    """
+    Delete Crew by id
+    """
     crew = await crud.get(id)
     if not crew:
         raise HTTPException(status_code=404, detail="Crew not found")
@@ -91,6 +100,9 @@ async def delete_crew(id: int) -> CrewResponseSchema:
 
 @router.put("/{id}/", response_model=CrewSchema)
 async def update_crew(id: int, payload: CrewUpdatePayloadSchema) -> CrewSchema:
+    """
+    Update Crew by id
+    """
     crew = await crud.put(id, payload)
     if not crew:
         raise HTTPException(status_code=404, detail="Crew not found")
