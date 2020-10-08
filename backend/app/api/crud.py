@@ -24,7 +24,7 @@ async def get(id: int) -> Union[dict, None]:
 
 
 async def get_all() -> List:
-    crews = await Crew.all().values()
+    crews = await Crew.all().order_by("id").values()
     return crews
 
 

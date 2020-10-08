@@ -109,3 +109,46 @@ Las tecnologias Jedi seleccionadas para enfrentar el reto son las siguientes:
 5. Tiene excelente documentacion 
 
 <br>
+
+### Frontend:
+
+**VueJs**
+1. Rápida curva de aprendizaje
+2. Un ecosistema sólido
+3. Reactividad
+4. Buena comunidad
+
+### DB:
+
+**Postgresql**
+1. Open source
+2. Multiplataforma
+3. Alto volumen de datos
+4. PgAdmin para manejar seguridad de informacion
+
+
+### Instalación local con Docker-compose
+Empiece por asegurarse de tener Docker y Docker Compose:
+```bash
+$ docker -v
+Docker version 19.03.8, build afacb8b
+
+$ docker-compose -v
+docker-compose version 1.25.4, build 8d51620a
+```
+**Nota:**  
+Asegúrese de instalarlos o actualizarlos si es necesario.  
+[Instala Docker aqui!](https://docs.docker.com/get-docker/)  
+
+Luego de instalar Docker, clone este repositorio e inicie docker-compose.
+```bash
+$ git clone https://github.com/jovicon/the_empire_strikes_back_challenge.git
+
+$ cd the_empire_strikes_back_challenge
+
+$ docker-compose up -d --build
+```
+
+Al terminar el **build** ingresa a la [app aqui!](http://localhost:8080/)  
+
+Documentacion de API: [click aqui!](http://localhost:8002/docs)  
