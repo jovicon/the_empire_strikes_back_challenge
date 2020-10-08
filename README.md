@@ -128,7 +128,7 @@ Las tecnologias Jedi seleccionadas para enfrentar el reto son las siguientes:
 
 
 ## Instalación local con Docker-compose
-Empiece por asegurarse de tener Docker y Docker Compose:
+Empiece por asegurarse de tener Docker y Docker Compose instado en su equipo:
 ```bash
 $ docker -v
 Docker version 19.03.8, build afacb8b
